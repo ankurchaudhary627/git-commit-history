@@ -1,9 +1,14 @@
+import '../styles/Header.css'
+
 const Header = () => {
   return (
-    <div>
-      <p>Hello from header component!!</p>
+    <div className='header'>
+      <input />
+      <button>Submit</button>
+      <button>Refresh</button>
+      <p>Counter placeholder</p>
     </div>
   )
 }
 
-export default Header;
+export default Header
