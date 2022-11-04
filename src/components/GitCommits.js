@@ -1,7 +1,5 @@
 import { getCommitDetailString } from '../helpers/getCommitDetailString'
 
-import '../styles/GitCommits.css'
-
 const GitCommits = (props) => {
   const { commitMessage, timeStamp, userName } = props
   console.log('data', commitMessage, getCommitDetailString(timeStamp, userName), userName)

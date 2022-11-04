@@ -4,3 +4,31 @@
   justify-content: space-evenly;
   align-items: center;
 }
+
+input[type=button],
+input[type=submit] {
+  background-color: #04AA6D;
+  border: 1px solid #bacdd8;
+  border-radius: 12px;
+  color: white;
+  padding: 16px 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #bacdd8;
+  border-radius: 12px;
+}
+
+span {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  padding: 8px;
+  color: black;
+}
