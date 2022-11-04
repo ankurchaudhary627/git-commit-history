@@ -1,8 +1,10 @@
 import { useState } from 'react'
 
+// import '../styles/Form.css'
+
 const Form = (props) => {
-  const { fetchCommits } = props
-  const [accessToken, setAccessToken] = useState('');
+  const { fetchCommits, counterReset } = props
+  const [accessToken, setAccessToken] = useState('')
 
   const handleChange = (event) => {
     setAccessToken(event.target.value)
@@ -18,6 +20,9 @@ const Form = (props) => {
 
     // API call to fetch commits.
     fetchCommits(accessToken)
+
+    // reset counter
+    counterReset()
   }
 
   return (
@@ -35,7 +40,7 @@ const Form = (props) => {
         <input type='submit' value='Submit' />
       </form>
     </div>
-  );
+  )
 }
 
 export default Form

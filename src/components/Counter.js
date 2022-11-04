@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 
 const Counter = (props) => {
-  const { fetchCommits, test } = props
+  const { fetchCommits, dataLoaded, resetCounter } = props
   const [timer, setTimer] = useState(30)
 
   useEffect(() => {
-    if (localStorage.getItem('github-access-token') && test) {
+    if (localStorage.getItem('github-access-token') && dataLoaded) {
       const counter = timer >= 0 && setInterval(() => setTimer(timer - 1), 1000)
       if (timer < 0) {
         fetchCommits(localStorage.getItem('github-access-token'))
@@ -13,7 +13,11 @@ const Counter = (props) => {
       }
       return () => clearInterval(counter)
     }
-  }, [timer, test, fetchCommits])
+  }, [timer, dataLoaded, fetchCommits])
+
+  useEffect(() => {
+    setTimer(30)
+  }, [resetCounter])
   return (
     <div>
       Auto-refresh in:
