@@ -15,6 +15,7 @@ import {
 import '../styles/Header.css'
 
 const Header = () => {
+  const [test, setTest] = useState(false)
 
   const fetchCommits = (accessToken) => {
     console.log(accessToken);
@@ -29,6 +30,7 @@ const Header = () => {
       }
     ).then((res) => {
       console.log(res.data);
+      setTest(true)
     }).catch((err) => {
       console.log(err);
     })
@@ -38,7 +40,7 @@ const Header = () => {
     <div className='header'>
       <Form fetchCommits={fetchCommits} />
       <RefreshCommits fetchCommits={fetchCommits} />
-      <Counter />
+      <Counter fetchCommits={fetchCommits} test={test} />
     </div>
   )
 }
