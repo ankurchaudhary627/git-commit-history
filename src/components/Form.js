@@ -8,12 +8,10 @@ const Form = (props) => {
 
   const handleChange = (event) => {
     setAccessToken(event.target.value)
-    console.log('inside handlechange', event.target.value)
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    console.log('inside handleSubmit', accessToken)
 
     // storing access-token in browser local storage.
     localStorage.setItem('github-access-token', accessToken)

@@ -2,7 +2,6 @@ import { getCommitDetailString } from '../helpers/getCommitDetailString'
 
 const GitCommits = (props) => {
   const { commitMessage, timeStamp, userName } = props
-  console.log('data', commitMessage, getCommitDetailString(timeStamp, userName), userName)
   return (
     <div id='container'>
       <div class='commit-card'>

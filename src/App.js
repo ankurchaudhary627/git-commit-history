@@ -16,7 +16,6 @@ const App = () => {
   const [dataLoaded, setDataLoaded] = useState(false)
 
   const fetchCommits = (accessToken) => {
-    console.log(accessToken)
     axios.get(`${GITHUB_API_BASE_URL}/repos/${USERNAME}/${REPO_NAME}/commits`,
       {
         per_page: PER_PAGE
@@ -27,7 +26,6 @@ const App = () => {
         }
       }
     ).then((res) => {
-      console.log(res.data)
       setCommitsData(res.data)
       setDataLoaded(true)
     }).catch((err) => {

@@ -4,7 +4,6 @@ import '../styles/GitCommitHistory.css'
 
 const GitCommitHistory = (props) => {
   const { commitsData } = props
-  console.log(commitsData.length)
   return (
     <div className='git-commit-history'>
       {
