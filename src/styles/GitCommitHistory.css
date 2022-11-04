@@ -1,3 +1,33 @@
 .git-commit-history {
   margin: auto;
 }
+
+#container {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+.commit-card {
+  background-color: white;
+  border: 1px solid #bacdd8;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.commit-card-message {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+p {
+  font-size: 14px;
+  color: #7f8c9b;
+  line-height: 150%;
+}
+
+.commit-card-details {
+  padding: 8px 8px 8px 8px;
+  text-align: left;
+}

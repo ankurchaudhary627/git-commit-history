@@ -28,7 +28,7 @@ const Form = (props) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="country_code">Enter Personal Access Token:</label>
+        <span>Enter Personal Access Token:</span>
         <input
           type='text'
           id='access-token'
